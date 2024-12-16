@@ -1,0 +1,437 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    background-image: url('./img/header\ fone.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    /* border: 1px solid red; */
+}
+nav{
+    width: 100%;
+    height: 100px;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    z-index: 1000;
+}
+nav.scrolled {
+    background-color: #e2ac3f68;
+}
+
+.navi {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 500px;
+}
+
+.navi a {
+    font-family: "Roboto Condensed", sans-serif;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.navi a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #E2AB3F;
+    transition: 0s ease-in-out
+}
+
+.navi a:hover::after {
+    width: 100%;
+}
+
+.navi_btn {
+    display: flex;
+    gap: 50px;
+}
+.phone{
+display: flex;
+}
+
+.scroll_top {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    color: #E2AB3F;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll_top.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scroll_top.hide {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.header_text {
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1;
+}
+
+h1 {
+    font-family: 'Balqis', sans-serif;
+    color: #E2AB3F;
+    font-weight: normal;
+    font-size: 80px;
+    margin: 0;
+}
+
+p {
+    font-style: italic;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.header_text h1 {
+    font-size: 12rem;
+    color: black;
+}
+
+.header_text p {
+    font-size: 3rem;
+    margin-left: 400px;
+    margin-top: 0;
+    padding: 0;
+    font-weight: light;
+}
+
+#about {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 50px;
+    line-height: 1;
+    text-align: start;
+}
+
+.about_sec {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.slide {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
+
+.tour_photo {
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.tour_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide_wrapper {
+    width: 100%;
+}
+
+.slide_counter {
+    display: flex;
+    width: 180px;
+    align-items: center;
+    font-size: 24px;
+    color: rgba(0, 0, 0, .5)
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.btn :hover {
+    color: #E2AB3F;
+}
+
+.next,
+.next2 {
+    right: 10px;
+}
+
+.prev,
+.prev2 {
+    left: 10px;
+}
+
+.btn i {
+    transition: .3s;
+}
+
+.btn i {
+    transition: .3s;
+}
+
+
+.tour_text {
+    padding: 50px 300px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+}
+
+b {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.trip_sec {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.trip_text {
+    padding: 0 200px 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+}
+
+.trip_photo {
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.trip_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.click {
+    border: 1px solid #E2AB3F;
+    padding: 15px 50px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hotel_info {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.hotel_right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.hotel_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hotel_photo {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.hotel_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price_text {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+.price_info {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding-bottom: 150px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    border: 1px solid #E2AB3F;
+    padding: 15px 80px;
+    background-color: white;
+}
+
+.price_date {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.price_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    padding-top: 100px;
+    background-image: url('./img/footer\ fone.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.balloon_text {
+    background-image: url('./img/balloon\ white.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 400px;
+    position: relative;
+    text-align: center;
+    color: #E2AB3F;
+    padding: 100px;
+}
+
+
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.model_dialog {
+    max-width: 400px;
+    margin: 40px auto
+}
+
+.model_content {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    max-height: 80vh;
+    overflow-y: auto
+}
+
+.model_close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color: #000;
+    opacity: .5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.model_title {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase
+}
+
+.model_input {
+    display: block;
+    margin: 10px auto;
+    width: 280px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 20px;
+    outline: 0
+}
+
+.model_btn {
+    display: block;
+    width: 270px;
+    margin: 0 auto;
+    border: 1px solid #E2AB3F;
+    padding: 10px 50px;
+    background-color: white;
+}
